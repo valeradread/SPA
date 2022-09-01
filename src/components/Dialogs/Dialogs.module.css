@@ -1,0 +1,54 @@
+.dialogs{
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+}
+
+.dialogsItems{
+
+    background-color: coral;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+
+}
+
+.messages {
+    padding: 10px;
+    display: grid;
+    grid-template-areas:
+    "allMessages"
+    "newMessage";
+}
+
+.dialog{
+
+}
+
+.dialogsItems .active{
+    color: crimson;
+}
+
+.profilePhoto{
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+}
+
+.dialogContent{
+    display: flex;
+    align-items: start;
+    text-decoration: none;
+}
+
+.dialogName{
+    margin-left: 5%;
+}
+
+.newMessage{
+    grid-area: newMessage;
+    align-self: end;
+    grid-template-columns: 1fr 1fr;
+}
+
+.allMessages{
+    grid-area: allMessages;
+}
