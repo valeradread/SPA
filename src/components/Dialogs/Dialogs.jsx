@@ -7,10 +7,10 @@ import React from "react";
 
 const Dialogs = (props) => {
 
-    let dialogsElements = props.dialogs.map(dialog => <DialogItem name={dialog.name} id={dialog.id}
+    let dialogsElements = props.dialogsPage.dialogs.map(dialog => <DialogItem name={dialog.name} id={dialog.id}
                                                                         photo={dialog.photo}/>);
 
-    let messagesElements = props.messages.map(m => <Message message={m.message} id={m.id}/>);
+    let messagesElements = props.dialogsPage.messages.map(m => <Message message={m.message} id={m.id}/>);
     let newMessageElement = React.createRef();
 
     let onSendMessage = () => {
@@ -37,7 +37,7 @@ const Dialogs = (props) => {
                 </div>
                 <div className={s.newMessage}>
                     <div>
-                        <textarea ref={newMessageElement} onChange={printTextMessage} value={props.newMessageText}></textarea>
+                        <textarea ref={newMessageElement} onChange={printTextMessage} value={props.dialogsPage.newMessageText}></textarea>
                     </div>
                     <div>
                         <button onClick={onSendMessage}>Send</button>
