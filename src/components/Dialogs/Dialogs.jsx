@@ -8,9 +8,9 @@ import React from "react";
 const Dialogs = (props) => {
 
     let dialogsElements = props.dialogsPage.dialogs.map(dialog => <DialogItem name={dialog.name} id={dialog.id}
-                                                                        photo={dialog.photo}/>);
+                                                                        photo={dialog.photo} key={dialog.id}/>);
 
-    let messagesElements = props.dialogsPage.messages.map(m => <Message message={m.message} id={m.id}/>);
+    let messagesElements = props.dialogsPage.messages.map(m => <Message message={m.message} id={m.id} key={m.id}/>);
     let newMessageElement = React.createRef();
 
     let onSendMessage = () => {
